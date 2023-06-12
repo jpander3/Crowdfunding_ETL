@@ -4,6 +4,7 @@
 --DROP TABLE category
 --DROP TABLE subcategory
 --DROP TABLE campaign
+--DROP TABLE contacts
 
 
 CREATE TABLE category(
@@ -20,8 +21,8 @@ CREATE TABLE subcategory(
 
 CREATE TABLE contacts(
     contact_id integer NOT NULL,
-    first_name "char",
-    last_name "char",
+    first_name character varying NOT NULL,
+    last_name character varying NOT NULL,
     email character varying,
     PRIMARY KEY (contact_id)
 );
@@ -31,8 +32,8 @@ CREATE TABLE campaign(
     contact_id integer,
     company_name character varying,
     description character varying,
-    goal integer,
-    pledged integer,
+    goal numeric,
+    pledged numeric,
     outcome character varying,
     backers_count integer,
     country character varying,
