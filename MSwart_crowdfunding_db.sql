@@ -46,8 +46,10 @@ CREATE TABLE campaign(
 	FOREIGN KEY (category_id) REFERENCES category(category_id),
 	FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id)
  );
- 
- --Verify table creation
+
+--At this point, I imported the CSV files using the UX in PgAdmin4 the way that Jamie showed us in class
+
+ --Verify table creation - all of these work and pull up the correct info
  
  SELECT *
  FROM contacts;
